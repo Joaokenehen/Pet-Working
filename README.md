@@ -60,6 +60,7 @@ PetWorking é uma aplicação web completa desenvolvida para gestão de pet shop
 - Bcrypt para criptografia
 - Jest para testes
 - Dotenv para variáveis de ambiente
+- Docker
 
 ### Frontend
 - React
@@ -178,5 +179,6 @@ npm test
 Lucas Custódio
 João Gustavo
 ````
+
 
 
