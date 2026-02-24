@@ -98,6 +98,8 @@ npm install
 
 4. Configure o banco de dados
 ```bash
+# Crie um arquivo .env na pasta backend com as seguintes variáveis
+
 # MySQL Setup
 MYSQL_ROOT_PASSWORD=suasenha123
 MYSQL_DATABASE=petworking
@@ -176,4 +178,5 @@ npm test
 Lucas Custódio
 João Gustavo
 ````
+
 
