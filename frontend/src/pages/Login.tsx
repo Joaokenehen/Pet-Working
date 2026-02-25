@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { Eye, EyeOff } from "lucide-react";
 import petworkingLogo from "../assets/petrking.png";
+import test from "node:test";
+import { input } from "framer-motion/m";
 
 function Login() {
   useBodyClass("login-page");
@@ -82,6 +84,7 @@ function Login() {
                   value: formData.email,
                   placeholder: "Digite seu email",
                   onChange: handleChange,
+                  "input-test": "email-input",
                 }}
               />
             </div>

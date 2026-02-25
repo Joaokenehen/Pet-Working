@@ -1,7 +1,9 @@
+import test from "node:test";
 import "../styles/Input.css";
 
 type InputProps = {
   label?: string;
+  "input-test"?: string;
   type: string;
   name: string;
   value: string;
@@ -28,7 +30,11 @@ const Input = ({
   options,
   error,
   "data-testid": dataTestId,
+  "input-test": inputTest,
 }: InputProps) => {
+
+  const testIdentifier = inputTest || dataTestId || `${name}-input`;
+
   return (
     <div className="input-box">
       <label>{label}</label>{" "}
@@ -39,7 +45,7 @@ const Input = ({
           onChange={onChange}
           style={{ color: textColor }}
           required
-          data-testid={dataTestId}
+          data-testid={testIdentifier}
         >
           <option value="">{placeholder || "Selecione uma opção"}</option>
           {options?.map((option) => (
@@ -57,7 +63,7 @@ const Input = ({
           placeholder={placeholder}
           style={{ color: textColor }}
           required={required}
-          data-testid={dataTestId}
+          data-testid={testIdentifier}
         />
       )}
       {error && <span className="error-message">{error}</span>}
