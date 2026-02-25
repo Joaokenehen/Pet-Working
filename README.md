@@ -60,6 +60,7 @@ PetWorking é uma aplicação web completa desenvolvida para gestão de pet shop
 - Bcrypt para criptografia
 - Jest para testes
 - Dotenv para variáveis de ambiente
+- Docker
 
 ### Frontend
 - React
@@ -99,10 +100,29 @@ npm install
 4. Configure o banco de dados
 ```bash
 # Crie um arquivo .env na pasta backend com as seguintes variáveis
-DB_HOST=localhost
+
+# MySQL Setup
+MYSQL_ROOT_PASSWORD=suasenha123
+MYSQL_DATABASE=petworking
+MYSQL_USER=pet_user
+MYSQL_PASSWORD=suasenha123
+
+# Backend Connection (deve bater com os dados acima)
+DB_HOST=database
+DB_PORT=3306
 DB_USER=root
-DB_PASSWORD=sua-senha
+DB_PASSWORD=suasenha123
 DB_NAME=petworking
+
+JWT_SECRET=uma_chave_pica_das_galaxias_que_nem_o_thanos_conseguiria_quebrar_ainda_kkkkkkk
+JWT_EXPIRATION=24h
+PORT=3000
+CORS_ORIGIN=https://petworking.local
+NODE_ENV=production
+
+# Frontend
+VITE_CLOUDINARY_CLOUD_NAME=dfvj0coez
+VITE_CLOUDINARY_UPLOAD_PRESET=petworking_uploads
 ```
 
 5. Inicie o servidor backend
@@ -159,3 +179,6 @@ npm test
 Lucas Custódio
 João Gustavo
 ````
+
+
+
